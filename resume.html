@@ -4,71 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankit Patel - Flutter Developer Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #6f42c1;
-      --secondary: #f8f9fa;
-      --accent: #6610f2;
-      --text: #343a40;
-      --background: #ffffff;
-      --muted: #adb5bd;
+      --primary: #0d6efd;
+      --bg: #f1f3f5;
+      --text: #212529;
+      --heading: #0d1a26;
+      --white: #fff;
+      --gray: #6c757d;
     }
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--background);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
       color: var(--text);
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
 
     header {
-      background: linear-gradient(120deg, var(--primary), var(--accent));
-      color: white;
-      padding: 3rem 1rem;
+      background: var(--white);
+      padding: 2rem;
+      border-bottom: 1px solid #dee2e6;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      position: relative;
-      border-bottom: 5px solid var(--accent);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
+      font-size: 2.5rem;
+      color: var(--heading);
       margin: 0;
-      font-size: 2.75rem;
     }
 
     header p {
-      margin: 0.5rem 0;
-      font-size: 1.25rem;
-      color: var(--secondary);
-    }
-
-    .portfolio-btn {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
+      color: var(--gray);
+      margin: 0.5rem 0 1rem;
     }
 
     .portfolio-btn a {
-      background: white;
-      color: var(--accent);
+      background: var(--primary);
+      color: var(--white);
       padding: 0.6rem 1.2rem;
-      border-radius: 2rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
+      transition: background 0.3s ease;
     }
 
     .portfolio-btn a:hover {
-      background: var(--accent);
-      color: white;
-      border-color: white;
+      background: #0b5ed7;
     }
 
     .contact-icons {
@@ -76,96 +63,149 @@
     }
 
     .contact-icons a {
-      margin: 0 0.5rem;
-      font-size: 1rem;
+      display: inline-block;
+      margin: 0 0.4rem;
+      padding: 0.4rem 0.6rem;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 6px;
       text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 2rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .contact-icons a:hover {
-      background-color: white;
-      color: var(--primary);
+      font-size: 0.9rem;
     }
 
     .container {
-      padding: 2rem;
       max-width: 960px;
-      margin: auto;
+      margin: 2rem auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     section {
       margin-bottom: 2rem;
-      animation: slideUp 0.6s ease-in-out;
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(10px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
     }
 
     h2 {
-      color: var(--primary);
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-      margin-bottom: 1rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 0.8rem;
+      color: var(--heading);
       font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
 
     .skills span {
       display: inline-block;
-      background: var(--secondary);
-      color: var(--primary);
-      padding: 0.4rem 0.8rem;
+      background: #e7f1ff;
+      color: #0d6efd;
       margin: 0.3rem;
-      border-radius: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
       font-size: 0.9rem;
-      font-weight: 500;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     .job, .project {
-      margin-bottom: 1.5rem;
-    }
-
-    ul, li {
-      padding-left: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
     }
 
     @media screen and (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
-
-      .portfolio-btn {
-        position: static;
-        margin-top: 1rem;
-        text-align: center;
+      .container {
+        padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
+    <h1>Ankit Anilbhai Patel</h1>
+    <p>Flutter Developer</p>
     <div class="portfolio-btn">
       <a href="https://ankit7046620.github.io/my-app-links/" target="_blank">🔗 View Portfolio</a>
     </div>
-    <h1>Ankit Anilbhai Patel</h1>
-    <p>Flutter Developer</p>
     <div class="contact-icons">
-      <a href="mailto:patelankit70466@gmail.com" title="Email">📧</a>
-      <a href="tel:+918460624920" title="Call">📞 +91 84606 24920</a>
-      <a href="tel:+917046620477" title="Alternate Call">📞 +91 70466 20477</a>
-      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" title="LinkedIn">🔗 LinkedIn</a>
+      <a href="mailto:patelankit70466@gmail.com">📧 Email</a>
+      <a href="tel:+918460624920">📞 +91 84606 24920</a>
+      <a href="tel:+917046620477">📞 +91 70466 20477</a>
+      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank">🔗 LinkedIn</a>
     </div>
   </header>
 
   <div class="container">
-    <!-- Content remains unchanged as per request -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Flutter Developer with 3.4+ years of hands-on experience in building scalable, high-performance mobile applications. Proficient in Flutter and Dart with strong knowledge of Firebase, RESTful APIs, and state management solutions like Provider, BLoC, GetX, and MobX. Known for writing clean code and delivering pixel-perfect UIs while working closely with cross-functional teams in Agile environments.</p>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="skills">
+        <span>Flutter</span><span>Dart</span><span>Firebase (Firestore, Auth, Cloud Functions)</span><span>RESTful APIs</span><span>Provider</span><span>BLoC</span><span>GetX</span><span>MobX</span><span>Git</span><span>Postman</span><span>Android Studio</span><span>VS Code</span><span>Payment Gateway Integration</span><span>Third-party SDKs</span><span>FlutterFlow (Basic)</span><span>Performance Optimization</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <strong>Flutter Developer – Techgrains Technology, Ahmedabad</strong> (June 2024 – Present)
+        <ul>
+          <li>Building modern, scalable mobile apps with clean UI/UX using Flutter.</li>
+          <li>Collaborating with designers and product owners to define new features.</li>
+          <li>Managing Firebase services including Firestore, Auth, and push notifications.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <strong>Flutter Developer – Differenz System, Surat</strong> (Sept 2022 – May 2024)
+        <ul>
+          <li>Delivered 4+ production-ready apps for various B2B and B2C domains.</li>
+          <li>Implemented complex features such as real-time messaging and cloud syncing.</li>
+          <li>Led daily standups and collaborated in Agile sprint activities.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <strong>Junior Flutter Developer – CoderKube Technologies, Surat</strong> (Aug 2021 – May 2022)
+        <ul>
+          <li>Supported senior developers in app development and testing.</li>
+          <li>Conducted API integration, UI enhancements, and bug fixing.</li>
+          <li>Actively involved in team code reviews and documentation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Projects</h2>
+      <div class="project">Gotoliqur Store App – Inventory and order management for liquor stores.</div>
+      <div class="project">KMS GST App – GST invoicing and financial report generation.</div>
+      <div class="project">Swass Gym – Gym member tracking with attendance and payment features.</div>
+      <div class="project">Mash App – Liver diagnosis support with expert feedback integration.</div>
+      <div class="project">Dheerta – B2B textile marketplace app for fabric trading.</div>
+      <div class="project">Peak Online Support – Live customer support and ticketing solution.</div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>B.Tech in Computer Engineering – CGPIT, Bardoli (2018 – 2021)</p>
+      <p>Diploma in Computer Engineering – CGPIT, Bardoli (2015 – 2018)</p>
+    </section>
+
+    <section>
+      <h2>Personal Details</h2>
+      <ul>
+        <li><strong>Date of Birth:</strong> 25 July 1995</li>
+        <li><strong>Gender:</strong> Male</li>
+        <li><strong>Marital Status:</strong> Unmarried</li>
+        <li><strong>Nationality:</strong> Indian</li>
+        <li><strong>Languages Known:</strong> English, Hindi, Gujarati</li>
+        <li><strong>Permanent Address:</strong> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</li>
+        <li><strong>Current Address:</strong> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
