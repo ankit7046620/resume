@@ -8,9 +8,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      color: #343a40;
-      animation: fadeIn 2s ease-in;
+      background: #ffffff;
+      color: #212529;
+      animation: fadeIn 1.5s ease-in;
     }
 
     @keyframes fadeIn {
@@ -19,11 +19,12 @@
     }
 
     header {
-      background: #007bff;
-      color: white;
+      background: #343a40;
+      color: #f8f9fa;
       padding: 2rem 1rem;
       text-align: center;
       position: relative;
+      border-bottom: 5px solid #007bff;
     }
 
     header h1 {
@@ -33,11 +34,42 @@
 
     header p {
       margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #adb5bd;
+    }
+
+    .portfolio-btn {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .portfolio-btn a {
+      background: #007bff;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .portfolio-btn a:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .contact-icons a {
+      margin: 0 0.5rem;
+      color: #f8f9fa;
+      font-size: 1.3rem;
+      text-decoration: none;
     }
 
     .container {
-      padding: 1rem 2rem;
-      max-width: 900px;
+      padding: 2rem;
+      max-width: 960px;
       margin: auto;
     }
 
@@ -54,62 +86,33 @@
     h2 {
       color: #007bff;
       border-bottom: 2px solid #007bff;
-      padding-bottom: 0.5rem;
-    }
-
-    ul, li {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
 
     .skills span {
       display: inline-block;
-      background: #dee2e6;
+      background: #e9ecef;
       padding: 0.4rem 0.8rem;
-      margin: 0.2rem;
+      margin: 0.3rem;
       border-radius: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
-    .project, .job {
-      margin-bottom: 1rem;
+    .job, .project {
+      margin-bottom: 1.2rem;
     }
 
-    .contact-icons a {
-      margin: 0 0.5rem;
-      color: white;
-      text-decoration: none;
-    }
-
-    .portfolio-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-
-    .portfolio-btn a {
-      background: white;
-      color: #007bff;
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .portfolio-btn a:hover {
-      background: #0056b3;
-      color: white;
+    ul, li {
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     @media screen and (max-width: 600px) {
       header h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
-      .container {
-        padding: 1rem;
-      }
+
       .portfolio-btn {
         position: static;
         text-align: center;
@@ -121,21 +124,21 @@
 <body>
   <header>
     <div class="portfolio-btn">
-      <a href="https://ankit7046620.github.io/my-app-links/" target="_blank">My Portfolio</a>
+      <a href="https://ankit7046620.github.io/my-app-links/" target="_blank">🔗 View Portfolio</a>
     </div>
     <h1>Ankit Anilbhai Patel</h1>
     <p>Flutter Developer</p>
     <div class="contact-icons">
       <a href="mailto:patelankit70466@gmail.com">📧</a>
       <a href="tel:+918460624920">📞</a>
-      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank">🔗</a>
+      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank">in</a>
     </div>
   </header>
 
   <div class="container">
     <section>
       <h2>Professional Summary</h2>
-      <p>Flutter Developer with 3.4+ years of hands-on experience building scalable, high-performance mobile applications with strong UI/UX and backend integration using Firebase and RESTful APIs.</p>
+      <p>Flutter Developer with 3.4+ years of experience in building high-performance mobile apps with pixel-perfect UIs, scalable architecture, and seamless integration with Firebase and RESTful services.</p>
     </section>
 
     <section>
@@ -150,33 +153,33 @@
       <div class="job">
         <strong>Flutter Developer – Techgrains Technology</strong> (June 2024 – Present)
         <ul>
-          <li>Building scalable apps with clean UI/UX.</li>
-          <li>Collaborating on features and Firebase services.</li>
+          <li>Developing clean and maintainable codebases.</li>
+          <li>Managing UI/UX and Firebase backend services.</li>
         </ul>
       </div>
       <div class="job">
         <strong>Flutter Developer – Differenz System</strong> (Sept 2022 – May 2024)
         <ul>
-          <li>Delivered 4+ production-ready apps for B2B/B2C.</li>
-          <li>Implemented real-time features, cloud sync, and agile participation.</li>
+          <li>Launched 4+ full-featured apps in B2B/B2C domains.</li>
+          <li>Led Agile team standups and integrated real-time features.</li>
         </ul>
       </div>
       <div class="job">
         <strong>Junior Flutter Developer – CoderKube Technologies</strong> (Aug 2021 – May 2022)
         <ul>
-          <li>UI enhancements, API integrations, bug fixing, and team collaboration.</li>
+          <li>Assisted in app development, testing, and bug resolution.</li>
         </ul>
       </div>
     </section>
 
     <section>
       <h2>Key Projects</h2>
-      <div class="project">Gotoliqur Store App – Inventory/order management for liquor stores.</div>
-      <div class="project">KMS GST App – Invoicing and report generation.</div>
-      <div class="project">Swass Gym – Attendance and payments tracking.</div>
-      <div class="project">Mash App – Liver diagnosis support.</div>
-      <div class="project">Dheerta – B2B textile marketplace.</div>
-      <div class="project">Peak Online Support – Live support and ticketing.</div>
+      <div class="project">• Gotoliqur Store App – Inventory/order management.</div>
+      <div class="project">• KMS GST App – Financial reporting and invoicing.</div>
+      <div class="project">• Swass Gym – Member tracking and payment system.</div>
+      <div class="project">• Mash App – Liver diagnosis with expert feedback.</div>
+      <div class="project">• Dheerta – B2B textile marketplace app.</div>
+      <div class="project">• Peak Online Support – Customer ticketing system.</div>
     </section>
 
     <section>
