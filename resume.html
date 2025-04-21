@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankit Patel - Flutter Developer Resume</title>
   <style>
+    :root {
+      --primary: #6f42c1;
+      --secondary: #f8f9fa;
+      --accent: #6610f2;
+      --text: #343a40;
+      --background: #ffffff;
+      --muted: #adb5bd;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #ffffff;
-      color: #212529;
-      animation: fadeIn 1.5s ease-in;
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      animation: fadeIn 1s ease-in;
     }
 
     @keyframes fadeIn {
@@ -19,23 +28,24 @@
     }
 
     header {
-      background: #343a40;
-      color: #f8f9fa;
-      padding: 2rem 1rem;
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 1rem;
       text-align: center;
       position: relative;
-      border-bottom: 5px solid #007bff;
+      border-bottom: 5px solid var(--accent);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.75rem;
     }
 
     header p {
       margin: 0.5rem 0;
-      font-size: 1.2rem;
-      color: #adb5bd;
+      font-size: 1.25rem;
+      color: var(--secondary);
     }
 
     .portfolio-btn {
@@ -45,35 +55,40 @@
     }
 
     .portfolio-btn a {
-      background: #007bff;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
+      background: white;
+      color: var(--accent);
+      padding: 0.6rem 1.2rem;
+      border-radius: 2rem;
       text-decoration: none;
       font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
     }
 
     .portfolio-btn a:hover {
-      background: #0056b3;
-      transform: scale(1.05);
+      background: var(--accent);
+      color: white;
+      border-color: white;
+    }
+
+    .contact-icons {
+      margin-top: 1rem;
     }
 
     .contact-icons a {
       margin: 0 0.5rem;
-      font-size: 1.3rem;
+      font-size: 1rem;
       text-decoration: none;
-      padding: 0.4rem 0.6rem;
-      border-radius: 50%;
-      background-color: #6c757d;
-      color: #ffffff;
-      transition: background 0.3s ease;
+      padding: 0.4rem 0.8rem;
+      border-radius: 2rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transition: all 0.3s ease;
     }
 
     .contact-icons a:hover {
-      background-color: #007bff;
-      color: #ffffff;
+      background-color: white;
+      color: var(--primary);
     }
 
     .container {
@@ -84,32 +99,36 @@
 
     section {
       margin-bottom: 2rem;
-      animation: slideUp 1s ease-in-out;
+      animation: slideUp 0.6s ease-in-out;
     }
 
     @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
+      from { transform: translateY(10px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
     h2 {
-      color: #007bff;
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 0.3rem;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
     .skills span {
       display: inline-block;
-      background: #e9ecef;
+      background: var(--secondary);
+      color: var(--primary);
       padding: 0.4rem 0.8rem;
       margin: 0.3rem;
       border-radius: 1rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     .job, .project {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     ul, li {
@@ -119,13 +138,13 @@
 
     @media screen and (max-width: 600px) {
       header h1 {
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
 
       .portfolio-btn {
         position: static;
-        text-align: center;
         margin-top: 1rem;
+        text-align: center;
       }
     }
   </style>
@@ -141,7 +160,7 @@
       <a href="mailto:patelankit70466@gmail.com" title="Email">📧</a>
       <a href="tel:+918460624920" title="Call">📞 +91 84606 24920</a>
       <a href="tel:+917046620477" title="Alternate Call">📞 +91 70466 20477</a>
-      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" title="LinkedIn">in</a>
+      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" title="LinkedIn">🔗 LinkedIn</a>
     </div>
   </header>
 
