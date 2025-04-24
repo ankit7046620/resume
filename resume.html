@@ -32,7 +32,6 @@
     header {
       text-align: center;
       margin-bottom: 2rem;
-      position: relative;
     }
 
     h1 {
@@ -57,9 +56,6 @@
     }
 
     .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
       color: var(--gray);
       text-decoration: none;
       transition: color 0.2s;
@@ -78,116 +74,26 @@
       border-radius: 0.5rem;
       text-decoration: none;
       font-weight: 500;
-      transition: all 0.2s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .portfolio-btn:hover {
-      background-color: #0ea371;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    .portfolio-btn i {
-      margin-right: 0.5rem;
     }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     h2 {
       color: var(--primary);
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--border);
-      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background-color: var(--primary);
+    p, li {
+      margin-bottom: 0.5rem;
     }
 
     ul {
       padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .job {
-      margin-bottom: 1.5rem;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
-
-    .job-title {
-      font-weight: 600;
-      color: var(--dark);
-    }
-
-    .company {
-      color: var(--primary);
-    }
-
-    .date {
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill {
-      background-color: var(--primary-light);
-      color: white;
-      padding: 0.375rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.875rem;
-    }
-
-    .project {
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background-color: var(--card-bg);
-      border-radius: 0.5rem;
-      border-left: 3px solid var(--primary);
-    }
-
-    .project-title {
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 0.25rem;
-    }
-
-    .personal-details {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .detail-item {
-      margin-bottom: 0.5rem;
-    }
-
-    .detail-label {
-      font-weight: 500;
-      color: var(--dark);
     }
 
     @media (max-width: 600px) {
@@ -199,35 +105,26 @@
         font-size: 2rem;
       }
 
-      .job-header {
+      .contact-info {
         flex-direction: column;
-        gap: 0.25rem;
-      }
-
-      .date {
-        margin-top: 0.25rem;
-      }
-
-      .personal-details {
-        grid-template-columns: 1fr;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Ankit Anilbhai Patel</h1>
-    <p class="title">Flutter Developer • Surat, India</p>
-
+    <p class="title">Flutter Developer</p>
     <div class="contact-info">
+      <span class="contact-item">📍 Surat, India</span>
       <span class="contact-item">📧 patelankit70466@gmail.com</span>
-      <span class="contact-item">📞 +91 84606 24920</span>
-      <span class="contact-item">📞 +91 70466 20477</span>
-      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" class="contact-item">🔗 LinkedIn</a>
+      <span class="contact-item">📞 +91 84606 24920 | +91 70466 20477</span>
+      <span class="contact-item">🔗 LinkedIn: ankit-patel-083434a2</span>
     </div>
-
-    <a href="https://ankit7046620.github.io/my-app-links/" target="_blank" class="portfolio-btn">
-      <i class="fas fa-external-link-alt"></i> View My Portfolio
+    <a href="https://ankit7046620.github.io/my-app-links/" class="portfolio-btn" target="_blank">
+      🔗 Resume & Portfolio
     </a>
   </header>
 
@@ -238,123 +135,69 @@
 
   <section>
     <h2>Core Competencies</h2>
-    <div class="skills">
-      <span class="skill">Flutter</span>
-      <span class="skill">Dart</span>
-      <span class="skill">Firebase</span>
-      <span class="skill">RESTful APIs</span>
-      <span class="skill">Provider</span>
-      <span class="skill">BLoC</span>
-      <span class="skill">GetX</span>
-      <span class="skill">MobX</span>
-      <span class="skill">Git</span>
-      <span class="skill">Postman</span>
-      <span class="skill">Android Studio</span>
-      <span class="skill">VS Code</span>
-      <span class="skill">Payment Gateway</span>
-      <span class="skill">Third-party SDKs</span>
-      <span class="skill">FlutterFlow</span>
-      <span class="skill">Performance Optimization</span>
-    </div>
+    <p><strong>Languages & Frameworks:</strong> Flutter, Dart</p>
+    <p><strong>State Management:</strong> Provider, BLoC, GetX, MobX</p>
+    <p><strong>Backend & Services:</strong> Firebase (Firestore, Auth, Cloud Functions), RESTful APIs</p>
+    <p><strong>Tools & Platforms:</strong> Git, Postman, Android Studio, VS Code</p>
+    <p><strong>Specialized Skills:</strong> Payment Gateway Integration, Third-party SDKs, FlutterFlow (Basic), Performance Optimization</p>
   </section>
 
   <section>
     <h2>Professional Experience</h2>
+    <p><strong>Flutter Developer</strong> – Techgrains Technology, Ahmedabad | June 2024 – Present</p>
+    <ul>
+      <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
+      <li>Collaborate with designers and product owners to define new features and ensure a seamless user experience.</li>
+      <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
+    </ul>
 
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Flutter Developer</span> – 
-          <span class="company">Techgrains Technology, Ahmedabad</span>
-        </div>
-        <span class="date">June 2024 – Present</span>
-      </div>
-      <ul>
-        <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
-        <li>Collaborate with designers and product owners to define new features.</li>
-        <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
-      </ul>
-    </div>
+    <p><strong>Flutter Developer</strong> – Differenz System, Surat | September 2022 – May 2024</p>
+    <ul>
+      <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
+      <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
+      <li>Led daily standups and actively participated in Agile sprint activities to ensure project milestones were met.</li>
+    </ul>
 
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Flutter Developer</span> – 
-          <span class="company">Differenz System, Surat</span>
-        </div>
-        <span class="date">Sept 2022 – May 2024</span>
-      </div>
-      <ul>
-        <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
-        <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
-        <li>Led daily standups and actively participated in Agile sprint activities.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Junior Flutter Developer</span> – 
-          <span class="company">CoderKube Technologies, Surat</span>
-        </div>
-        <span class="date">Aug 2021 – May 2022</span>
-      </div>
-      <ul>
-        <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
-        <li>Actively participated in team code reviews and documentation.</li>
-      </ul>
-    </div>
+    <p><strong>Junior Flutter Developer</strong> – CoderKube Technologies, Surat | August 2021 – May 2022</p>
+    <ul>
+      <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
+      <li>Actively participated in team code reviews and documentation.</li>
+    </ul>
   </section>
 
   <section>
     <h2>Key Projects</h2>
-    <div class="project">
-      <div class="project-title">Gotoliqur Store App</div>
-      <p>Helps users find and order liquor from nearby stores with delivery or pickup options. Location-aware, user-friendly experience.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">KMS GST App</div>
-      <p>Provides real-time GST insights with an automated reporting dashboard, helping leadership manage compliance and financial risks.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">Swass Gym</div>
-      <p>Fitness app for managing workout and diet plans with trainer and user roles to track performance and routine.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">Amalfi Jets</div>
-      <p>Private jet booking app offering luxury flight reservations, empty leg options, and global aircraft access.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">Mash App</div>
-      <p>Medical tool for analyzing liver health reports and delivering diagnostic support with expert integration.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">Dheerta</div>
-      <p>B2B platform for fabric trading across the textile supply chain with listing, browsing, and deal negotiation features.</p>
-    </div>
-    <div class="project">
-      <div class="project-title">Peak Online Support</div>
-      <p>Comprehensive mobile app for live chat, ticketing, quotes, and project updates without third-party dependencies.</p>
-    </div>
+    <ul>
+      <li><strong>Gotoliqur Store App:</strong> Created a mobile app that helps people find and order beer, wine, and spirits from liquor stores nearby. Users can choose to get their order delivered to their door or pick it up at the store. The app is easy to use and makes shopping for liquor quick and convenient by showing options based on the user's location.</li>
+      <li><strong>KMS GST App:</strong> The KMS GST Tool helps businesses better understand their GST data with real-time, easy-to-read insights. It features automated reports available 24/7 and an interactive dashboard that gives a complete view of compliance and financial health. The CFO Dashboard also highlights any compliance risks, helping leadership make smarter, faster decisions.</li>
+      <li><strong>Swass Gym:</strong> Built a gym app that helps manage members, their workouts, and diet plans. Trainers can create custom routines and meal charts for each user, and users can easily follow their plans and track their fitness progress right from the app.</li>
+      <li><strong>Amalfi Jets:</strong> Designed a private jet booking app that offers users access to a global fleet of aircraft. The app allows users to book flights, manage reservations, and view empty leg options—all in one sleek, user-friendly platform focused on luxury and convenience.</li>
+      <li><strong>Mash App:</strong> Created a tool that helps analyze liver health reports and provides expert feedback. The system supports doctors by offering diagnostic suggestions and integrating insights from medical professionals for more accurate evaluations.</li>
+      <li><strong>Dheerta:</strong> Developed a B2B mobile platform for seamless fabric trading, connecting textile manufacturers, wholesalers, and retailers. The app allows users to browse, list, and negotiate fabric deals in real-time, streamlining the entire textile supply chain process.</li>
+      <li><strong>Peak Online Support:</strong> Built a mobile app that keeps users connected to their website services without relying on third-party tools. The app includes live chat, support tickets, project updates, quotes, and package info—all in one easy-to-use platform.</li>
+    </ul>
   </section>
 
   <section>
     <h2>Education</h2>
-    <p>B.Tech in Computer Engineering – CGPIT, Bardoli (2018 – 2021)</p>
-    <p>Diploma in Computer Engineering – CGPIT, Bardoli (2015 – 2018)</p>
+    <p><strong>B.Tech in Computer Engineering</strong> – CGPIT, Bardoli | 2018 – 2021</p>
+    <p><strong>Diploma in Computer Engineering</strong> – CGPIT, Bardoli | 2015 – 2018</p>
   </section>
 
   <section>
     <h2>Personal Details</h2>
-    <div class="personal-details">
-      <div class="detail-item"><span class="detail-label">Date of Birth:</span> 25 July 1995</div>
-      <div class="detail-item"><span class="detail-label">Gender:</span> Male</div>
-      <div class="detail-item"><span class="detail-label">Marital Status:</span> Unmarried</div>
-      <div class="detail-item"><span class="detail-label">Nationality:</span> Indian</div>
-      <div class="detail-item"><span class="detail-label">Languages Known:</span> English, Hindi, Gujarati</div>
-      <div class="detail-item"><span class="detail-label">Permanent Address:</span> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</div>
-      <div class="detail-item"><span class="detail-label">Current Address:</span> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</div>
-    </div>
+    <p><strong>Date of Birth:</strong> 25th July 1995</p>
+    <p><strong>Gender:</strong> Male</p>
+    <p><strong>Marital Status:</strong> Unmarried</p>
+    <p><strong>Nationality:</strong> Indian</p>
+    <p><strong>Languages Known:</strong> English, Hindi, Gujarati</p>
   </section>
+
+  <section>
+    <h2>Contact Information</h2>
+    <p><strong>Permanent Address:</strong> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</p>
+    <p><strong>Current Address:</strong> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</p>
+  </section>
+
 </body>
 </html>
