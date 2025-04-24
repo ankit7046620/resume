@@ -1,52 +1,360 @@
-# Build the HTML content using the exact text line-by-line from the document, wrapped in a styled template
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ankit Patel - Flutter Developer Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --text: #334155;
+      --gray: #64748b;
+      --border: #e2e8f0;
+      --card-bg: #ffffff;
+      --accent: #10b981;
+    }
 
-# Define the main sections using the raw content from the file
-header = """
-<header>
-  <h1>Ankit Anilbhai Patel</h1>
-  <p class="title">Flutter Developer • Surat, India</p>
-  <div class="contact-info">
-    <span class="contact-item">📧 patelankit70466@gmail.com</span>
-    <span class="contact-item">📞 +91 84606 24920</span>
-    <span class="contact-item">📞 +91 70466 20477</span>
-    <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" class="contact-item">🔗 LinkedIn</a>
-  </div>
-  <a href="https://ankit7046620.github.io/my-app-links/" target="_blank" class="portfolio-btn">
-    <i class="fas fa-external-link-alt"></i> Resume & Portfolio
-  </a>
-</header>
-"""
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--light);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-# Extract the entire text and prepare for HTML line-by-line wrapping
-doc = Document("/mnt/data/v2_Ankit_Patel_Resume.docx")
-lines = [para.text.strip() for para in doc.paragraphs if para.text.strip()]
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
 
-# Helper to wrap content in sections
-def section_wrapper(title, content):
-    body = "<br>".join(escape(line) for line in content)
-    return f"<section>\n<h2>{escape(title)}</h2>\n<p>{body}</p>\n</section>"
+    h1 {
+      color: var(--dark);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-# Sections to group
-section_titles = [
-    "Professional Summary", "Core Competencies", "Professional Experience",
-    "Key Projects", "Education", "Personal Details", "Contact Information"
-]
+    .title {
+      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
 
-# Parse into structured sections
-structured = {}
-current = None
-for line in lines:
-    if line in section_titles:
-        current = line
-        structured[current] = []
-    elif current:
-        structured[current].append(line)
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
 
-# Generate HTML from structured data
-body_html = header
-for title in section_titles:
-    if title in structured:
-        body_html += section_wrapper(title, structured[title])
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-# Output final HTML content
-body_html[:2000]  # Show beginning of generated HTML as preview
+    .contact-item:hover {
+      color: var(--primary);
+    }
+
+    .portfolio-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .portfolio-btn:hover {
+      background-color: #0ea371;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .portfolio-btn i {
+      margin-right: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .job {
+      margin-bottom: 1.5rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-title {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .company {
+      color: var(--primary);
+    }
+
+    .date {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill {
+      background-color: var(--primary-light);
+      color: white;
+      padding: 0.375rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .project {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: var(--card-bg);
+      border-radius: 0.5rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .project-title {
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .personal-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .detail-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-label {
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .job-header {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .date {
+        margin-top: 0.25rem;
+      }
+
+      .personal-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ankit Anilbhai Patel</h1>
+    <p class="title">Flutter Developer • Surat, India</p>
+
+    <div class="contact-info">
+      <span class="contact-item">📧 patelankit70466@gmail.com</span>
+      <span class="contact-item">📞 +91 84606 24920</span>
+      <span class="contact-item">📞 +91 70466 20477</span>
+      <a href="https://linkedin.com/in/ankit-patel-083434a2" target="_blank" class="contact-item">🔗 LinkedIn</a>
+    </div>
+
+    <a href="https://ankit7046620.github.io/my-app-links/" target="_blank" class="portfolio-btn">
+      <i class="fas fa-external-link-alt"></i> View My Portfolio
+    </a>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p>Flutter Developer with over 3.4 years of hands-on experience in building scalable, high-performance mobile applications. Proficient in Flutter, Dart, Firebase, RESTful APIs, and state management solutions like Provider, BLoC, GetX, and MobX. Known for delivering pixel-perfect UIs and writing clean, maintainable code while working in Agile teams. Experienced in Firebase (Firestore, Auth, Cloud Functions) and integrating third-party SDKs.</p>
+  </section>
+
+  <section>
+    <h2>Core Competencies</h2>
+    <div class="skills">
+      <span class="skill">Flutter</span>
+      <span class="skill">Dart</span>
+      <span class="skill">Firebase</span>
+      <span class="skill">RESTful APIs</span>
+      <span class="skill">Provider</span>
+      <span class="skill">BLoC</span>
+      <span class="skill">GetX</span>
+      <span class="skill">MobX</span>
+      <span class="skill">Git</span>
+      <span class="skill">Postman</span>
+      <span class="skill">Android Studio</span>
+      <span class="skill">VS Code</span>
+      <span class="skill">Payment Gateway</span>
+      <span class="skill">Third-party SDKs</span>
+      <span class="skill">FlutterFlow</span>
+      <span class="skill">Performance Optimization</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Flutter Developer</span> – 
+          <span class="company">Techgrains Technology, Ahmedabad</span>
+        </div>
+        <span class="date">June 2024 – Present</span>
+      </div>
+      <ul>
+        <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
+        <li>Collaborate with designers and product owners to define new features.</li>
+        <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Flutter Developer</span> – 
+          <span class="company">Differenz System, Surat</span>
+        </div>
+        <span class="date">Sept 2022 – May 2024</span>
+      </div>
+      <ul>
+        <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
+        <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
+        <li>Led daily standups and actively participated in Agile sprint activities.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Junior Flutter Developer</span> – 
+          <span class="company">CoderKube Technologies, Surat</span>
+        </div>
+        <span class="date">Aug 2021 – May 2022</span>
+      </div>
+      <ul>
+        <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
+        <li>Actively participated in team code reviews and documentation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Projects</h2>
+    <div class="project">
+      <div class="project-title">Gotoliqur Store App</div>
+      <p>Helps users find and order liquor from nearby stores with delivery or pickup options. Location-aware, user-friendly experience.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">KMS GST App</div>
+      <p>Provides real-time GST insights with an automated reporting dashboard, helping leadership manage compliance and financial risks.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Swass Gym</div>
+      <p>Fitness app for managing workout and diet plans with trainer and user roles to track performance and routine.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Amalfi Jets</div>
+      <p>Private jet booking app offering luxury flight reservations, empty leg options, and global aircraft access.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Mash App</div>
+      <p>Medical tool for analyzing liver health reports and delivering diagnostic support with expert integration.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Dheerta</div>
+      <p>B2B platform for fabric trading across the textile supply chain with listing, browsing, and deal negotiation features.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Peak Online Support</div>
+      <p>Comprehensive mobile app for live chat, ticketing, quotes, and project updates without third-party dependencies.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>B.Tech in Computer Engineering – CGPIT, Bardoli (2018 – 2021)</p>
+    <p>Diploma in Computer Engineering – CGPIT, Bardoli (2015 – 2018)</p>
+  </section>
+
+  <section>
+    <h2>Personal Details</h2>
+    <div class="personal-details">
+      <div class="detail-item"><span class="detail-label">Date of Birth:</span> 25 July 1995</div>
+      <div class="detail-item"><span class="detail-label">Gender:</span> Male</div>
+      <div class="detail-item"><span class="detail-label">Marital Status:</span> Unmarried</div>
+      <div class="detail-item"><span class="detail-label">Nationality:</span> Indian</div>
+      <div class="detail-item"><span class="detail-label">Languages Known:</span> English, Hindi, Gujarati</div>
+      <div class="detail-item"><span class="detail-label">Permanent Address:</span> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</div>
+      <div class="detail-item"><span class="detail-label">Current Address:</span> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</div>
+    </div>
+  </section>
+</body>
+</html>
