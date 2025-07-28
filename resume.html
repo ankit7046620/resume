@@ -5,96 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ankit Patel - Flutter Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #2563eb;
       --accent: #10b981;
       --dark: #1e293b;
-      --light: #f8fafc;
-      --text: #334155;
-      --gray: #64748b;
-      --border: #e2e8f0;
+      --light: #f9fafb;
+      --gray: #6b7280;
+      --text: #374151;
+      --border: #e5e7eb;
       --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--light);
       color: var(--text);
-      max-width: 800px;
-      margin: auto;
       padding: 2rem;
-      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    h1 {
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--dark);
-      font-size: 2.25rem;
-      margin-bottom: 0.25rem;
     }
 
     .title {
       font-size: 1.2rem;
-      color: var(--primary);
       font-weight: 600;
-      margin-bottom: 1rem;
+      color: var(--primary);
+      margin: 0.5rem 0 1.2rem;
     }
 
     .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
       font-size: 0.95rem;
       color: var(--gray);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    .contact-info a {
-      text-decoration: none;
-      color: var(--gray);
-      transition: color 0.2s ease;
-    }
-
-    .contact-info a:hover {
-      color: var(--primary);
+    .contact-info span {
+      display: block;
+      margin-bottom: 0.3rem;
     }
 
     .portfolio-btn {
-      background-color: var(--accent);
-      color: white;
-      padding: 0.6rem 1.25rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
       display: inline-block;
       margin-top: 1rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
     }
 
     section {
       margin-bottom: 2rem;
     }
 
-    h2 {
-      font-size: 1.4rem;
+    section h2 {
+      font-size: 1.2rem;
       color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
       border-bottom: 2px solid var(--border);
-      margin-bottom: 1rem;
       padding-bottom: 0.4rem;
-    }
-
-    p, li {
-      margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
 
     ul {
-      padding-left: 1.25rem;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
     }
 
     @media (max-width: 600px) {
@@ -102,31 +111,98 @@
         padding: 1rem;
       }
 
-      h1 {
-        font-size: 1.75rem;
-      }
-
-      .contact-info {
-        flex-direction: column;
-        align-items: center;
+      header h1 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <header>
-    <h1>Ankit Anilbhai Patel</h1>
-    <p class="title">Flutter Developer</p>
-    <div class="contact-info">
-      <span><i class="fas fa-map-marker-alt"></i> Surat, India</span>
-      <span><i class="fas fa-envelope"></i> patelankit70466@gmail.com</span>
-      <span><i class="fas fa-phone"></i> +91 84606 24920</span>
-      <span><i class="fab fa-linkedin"></i> ankit-patel-083434a2</span>
-    </div>
-    <a href="https://ankit7046620.github.io/my-app-links/" class="portfolio-btn" target="_blank">🔗 Resume & Portfolio</a>
-  </header>
+    <header>
+      <h1>Ankit Anilbhai Patel</h1>
+      <p class="title">Flutter Developer</p>
+      <div class="contact-info">
+        <span>📍 Surat, India</span>
+        <span>📧 patelankit70466@gmail.com</span>
+        <span>📞 +91 84606 24920 | +91 70466 20477</span>
+        <span>🔗 LinkedIn: ankit-patel-083434a2</span>
+      </div>
+      <a href="https://ankit7046620.github.io/my-app-links/" target="_blank" class="portfolio-btn">🔗 Resume & Portfolio</a>
+    </header>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>Flutter Developer with 3.4+ years of experience building scalable, high-performance mobile applications. Expert in Flutter, Dart, Firebase, RESTful APIs, and modern state management (Provider, BLoC, GetX, MobX). Known for pixel-perfect UI, clean code,
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Flutter Developer with over 3.4 years of hands-on experience in building scalable, high-performance mobile applications. Proficient in Flutter, Dart, Firebase, RESTful APIs, and state management solutions like Provider, BLoC, GetX, and MobX. Known for delivering pixel-perfect UIs and writing clean, maintainable code while working in Agile teams. Experienced in Firebase (Firestore, Auth, Cloud Functions) and integrating third-party SDKs.</p>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <p><strong>Languages & Frameworks:</strong> Flutter, Dart</p>
+      <p><strong>State Management:</strong> Provider, BLoC, GetX, MobX</p>
+      <p><strong>Backend & Services:</strong> Firebase (Firestore, Auth, Cloud Functions), RESTful APIs</p>
+      <p><strong>Tools & Platforms:</strong> Git, Postman, Android Studio, VS Code</p>
+      <p><strong>Specialized Skills:</strong> Payment Gateway Integration, Third-party SDKs, FlutterFlow (Basic), Performance Optimization</p>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <p><strong>Flutter Developer</strong> – Techgrains Technology, Ahmedabad | June 2024 – Present</p>
+      <ul>
+        <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
+        <li>Collaborate with designers and product owners to define new features and ensure a seamless user experience.</li>
+        <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
+      </ul>
+
+      <p><strong>Flutter Developer</strong> – Differenz System, Surat | September 2022 – May 2024</p>
+      <ul>
+        <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
+        <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
+        <li>Led daily standups and actively participated in Agile sprint activities to ensure project milestones were met.</li>
+      </ul>
+
+      <p><strong>Junior Flutter Developer</strong> – CoderKube Technologies, Surat | August 2021 – May 2022</p>
+      <ul>
+        <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
+        <li>Actively participated in team code reviews and documentation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Projects</h2>
+      <ul>
+        <li><strong>Gotoliqur Store App:</strong> Created a mobile app for ordering liquor from nearby stores with delivery or pickup options.</li>
+        <li><strong>KMS GST App:</strong> Delivered real-time GST insights, automated reports, and CFO compliance dashboards.</li>
+        <li><strong>Swass Gym:</strong> Built an app to manage gym members, custom workouts, and diet plans.</li>
+        <li><strong>Amalfi Jets:</strong> Designed a private jet booking app with luxury travel features.</li>
+        <li><strong>Mash App:</strong> Liver health analysis tool offering AI-assisted medical feedback.</li>
+        <li><strong>Dheerta:</strong> B2B textile trading app connecting manufacturers, wholesalers, and retailers.</li>
+        <li><strong>Peak Online Support:</strong> Developed an internal support platform with live chat, tickets, and updates.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.Tech in Computer Engineering</strong> – CGPIT, Bardoli | 2018 – 2021</p>
+      <p><strong>Diploma in Computer Engineering</strong> – CGPIT, Bardoli | 2015 – 2018</p>
+    </section>
+
+    <section>
+      <h2>Personal Details</h2>
+      <p><strong>Date of Birth:</strong> 25th July 1995</p>
+      <p><strong>Gender:</strong> Male</p>
+      <p><strong>Marital Status:</strong> Unmarried</p>
+      <p><strong>Nationality:</strong> Indian</p>
+      <p><strong>Languages Known:</strong> English, Hindi, Gujarati</p>
+    </section>
+
+    <section>
+      <h2>Contact Information</h2>
+      <p><strong>Permanent Address:</strong> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</p>
+      <p><strong>Current Address:</strong> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</p>
+    </section>
+
+  </div>
+</body>
+</html>
