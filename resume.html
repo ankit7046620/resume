@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ankit Patel - Flutter Developer Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Ankit Patel - Flutter Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #2563eb;
-      --primary-light: #3b82f6;
+      --accent: #10b981;
       --dark: #1e293b;
       --light: #f8fafc;
       --text: #334155;
       --gray: #64748b;
       --border: #e2e8f0;
       --card-bg: #ffffff;
-      --accent: #10b981;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text);
       background-color: var(--light);
+      color: var(--text);
       max-width: 800px;
-      margin: 0 auto;
+      margin: auto;
       padding: 2rem;
+      line-height: 1.6;
     }
 
     header {
@@ -36,15 +35,15 @@
 
     h1 {
       color: var(--dark);
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.25rem;
+      margin-bottom: 0.25rem;
     }
 
     .title {
+      font-size: 1.2rem;
       color: var(--primary);
-      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .contact-info {
@@ -52,28 +51,30 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
+      font-size: 0.95rem;
+      color: var(--gray);
       margin-bottom: 1.5rem;
     }
 
-    .contact-item {
-      color: var(--gray);
+    .contact-info a {
       text-decoration: none;
-      transition: color 0.2s;
+      color: var(--gray);
+      transition: color 0.2s ease;
     }
 
-    .contact-item:hover {
+    .contact-info a:hover {
       color: var(--primary);
     }
 
     .portfolio-btn {
-      display: inline-block;
-      margin-top: 1rem;
       background-color: var(--accent);
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
+      padding: 0.6rem 1.25rem;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: 500;
+      display: inline-block;
+      margin-top: 1rem;
     }
 
     section {
@@ -81,11 +82,11 @@
     }
 
     h2 {
+      font-size: 1.4rem;
       color: var(--primary);
-      font-size: 1.5rem;
       border-bottom: 2px solid var(--border);
-      padding-bottom: 0.5rem;
       margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
     }
 
     p, li {
@@ -93,7 +94,7 @@
     }
 
     ul {
-      padding-left: 1.5rem;
+      padding-left: 1.25rem;
     }
 
     @media (max-width: 600px) {
@@ -102,7 +103,7 @@
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
 
       .contact-info {
@@ -118,86 +119,14 @@
     <h1>Ankit Anilbhai Patel</h1>
     <p class="title">Flutter Developer</p>
     <div class="contact-info">
-      <span class="contact-item">📍 Surat, India</span>
-      <span class="contact-item">📧 patelankit70466@gmail.com</span>
-      <span class="contact-item">📞 +91 84606 24920 | +91 70466 20477</span>
-      <span class="contact-item">🔗 LinkedIn: ankit-patel-083434a2</span>
+      <span><i class="fas fa-map-marker-alt"></i> Surat, India</span>
+      <span><i class="fas fa-envelope"></i> patelankit70466@gmail.com</span>
+      <span><i class="fas fa-phone"></i> +91 84606 24920</span>
+      <span><i class="fab fa-linkedin"></i> ankit-patel-083434a2</span>
     </div>
-    <a href="https://ankit7046620.github.io/my-app-links/" class="portfolio-btn" target="_blank">
-      🔗 Resume & Portfolio
-    </a>
+    <a href="https://ankit7046620.github.io/my-app-links/" class="portfolio-btn" target="_blank">🔗 Resume & Portfolio</a>
   </header>
 
   <section>
     <h2>Professional Summary</h2>
-    <p>Flutter Developer with over 3.4 years of hands-on experience in building scalable, high-performance mobile applications. Proficient in Flutter, Dart, Firebase, RESTful APIs, and state management solutions like Provider, BLoC, GetX, and MobX. Known for delivering pixel-perfect UIs and writing clean, maintainable code while working in Agile teams. Experienced in Firebase (Firestore, Auth, Cloud Functions) and integrating third-party SDKs.</p>
-  </section>
-
-  <section>
-    <h2>Core Competencies</h2>
-    <p><strong>Languages & Frameworks:</strong> Flutter, Dart</p>
-    <p><strong>State Management:</strong> Provider, BLoC, GetX, MobX</p>
-    <p><strong>Backend & Services:</strong> Firebase (Firestore, Auth, Cloud Functions), RESTful APIs</p>
-    <p><strong>Tools & Platforms:</strong> Git, Postman, Android Studio, VS Code</p>
-    <p><strong>Specialized Skills:</strong> Payment Gateway Integration, Third-party SDKs, FlutterFlow (Basic), Performance Optimization</p>
-  </section>
-
-  <section>
-    <h2>Professional Experience</h2>
-    <p><strong>Flutter Developer</strong> – Techgrains Technology, Ahmedabad | June 2024 – Present</p>
-    <ul>
-      <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
-      <li>Collaborate with designers and product owners to define new features and ensure a seamless user experience.</li>
-      <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
-    </ul>
-
-    <p><strong>Flutter Developer</strong> – Differenz System, Surat | September 2022 – May 2024</p>
-    <ul>
-      <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
-      <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
-      <li>Led daily standups and actively participated in Agile sprint activities to ensure project milestones were met.</li>
-    </ul>
-
-    <p><strong>Junior Flutter Developer</strong> – CoderKube Technologies, Surat | August 2021 – May 2022</p>
-    <ul>
-      <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
-      <li>Actively participated in team code reviews and documentation.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Key Projects</h2>
-    <ul>
-      <li><strong>Gotoliqur Store App:</strong> Created a mobile app that helps people find and order beer, wine, and spirits from liquor stores nearby. Users can choose to get their order delivered to their door or pick it up at the store. The app is easy to use and makes shopping for liquor quick and convenient by showing options based on the user's location.</li>
-      <li><strong>KMS GST App:</strong> The KMS GST Tool helps businesses better understand their GST data with real-time, easy-to-read insights. It features automated reports available 24/7 and an interactive dashboard that gives a complete view of compliance and financial health. The CFO Dashboard also highlights any compliance risks, helping leadership make smarter, faster decisions.</li>
-      <li><strong>Swass Gym:</strong> Built a gym app that helps manage members, their workouts, and diet plans. Trainers can create custom routines and meal charts for each user, and users can easily follow their plans and track their fitness progress right from the app.</li>
-      <li><strong>Amalfi Jets:</strong> Designed a private jet booking app that offers users access to a global fleet of aircraft. The app allows users to book flights, manage reservations, and view empty leg options—all in one sleek, user-friendly platform focused on luxury and convenience.</li>
-      <li><strong>Mash App:</strong> Created a tool that helps analyze liver health reports and provides expert feedback. The system supports doctors by offering diagnostic suggestions and integrating insights from medical professionals for more accurate evaluations.</li>
-      <li><strong>Dheerta:</strong> Developed a B2B mobile platform for seamless fabric trading, connecting textile manufacturers, wholesalers, and retailers. The app allows users to browse, list, and negotiate fabric deals in real-time, streamlining the entire textile supply chain process.</li>
-      <li><strong>Peak Online Support:</strong> Built a mobile app that keeps users connected to their website services without relying on third-party tools. The app includes live chat, support tickets, project updates, quotes, and package info—all in one easy-to-use platform.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <p><strong>B.Tech in Computer Engineering</strong> – CGPIT, Bardoli | 2018 – 2021</p>
-    <p><strong>Diploma in Computer Engineering</strong> – CGPIT, Bardoli | 2015 – 2018</p>
-  </section>
-
-  <section>
-    <h2>Personal Details</h2>
-    <p><strong>Date of Birth:</strong> 25th July 1995</p>
-    <p><strong>Gender:</strong> Male</p>
-    <p><strong>Marital Status:</strong> Unmarried</p>
-    <p><strong>Nationality:</strong> Indian</p>
-    <p><strong>Languages Known:</strong> English, Hindi, Gujarati</p>
-  </section>
-
-  <section>
-    <h2>Contact Information</h2>
-    <p><strong>Permanent Address:</strong> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</p>
-    <p><strong>Current Address:</strong> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</p>
-  </section>
-
-</body>
-</html>
+    <p>Flutter Developer with 3.4+ years of experience building scalable, high-performance mobile applications. Expert in Flutter, Dart, Firebase, RESTful APIs, and modern state management (Provider, BLoC, GetX, MobX). Known for pixel-perfect UI, clean code,
