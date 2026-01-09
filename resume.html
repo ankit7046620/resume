@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -17,11 +17,7 @@
       --card-bg: #ffffff;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -79,9 +75,7 @@
       font-weight: 500;
     }
 
-    section {
-      margin-bottom: 2rem;
-    }
+    section { margin-bottom: 2rem; }
 
     section h2 {
       font-size: 1.2rem;
@@ -93,27 +87,23 @@
       text-transform: uppercase;
     }
 
-    ul {
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
+    .job-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
-    ul li {
-      margin-bottom: 0.5rem;
-    }
+    .job-card strong { color: var(--dark); font-size: 1rem; }
 
-    p {
-      margin-bottom: 0.5rem;
-    }
+    ul { padding-left: 1.5rem; margin-top: 0.5rem; }
+    ul li { margin-bottom: 0.5rem; }
 
     @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
+      body { padding: 1rem; }
+      header h1 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -124,7 +114,7 @@
       <h1>Ankit Anilbhai Patel</h1>
       <p class="title">Flutter Developer</p>
       <div class="contact-info">
-        <span>📍 Surat, India</span>
+        <span>📍 Ahmedabad, India</span>
         <span>📧 patelankit70466@gmail.com</span>
         <span>📞 +91 84606 24920 | +91 70466 20477</span>
         <span>🔗 LinkedIn: ankit-patel-083434a2</span>
@@ -138,71 +128,44 @@
     </section>
 
     <section>
-      <h2>Core Competencies</h2>
-      <p><strong>Languages & Frameworks:</strong> Flutter, Dart</p>
-      <p><strong>State Management:</strong> Provider, BLoC, GetX, MobX</p>
-      <p><strong>Backend & Services:</strong> Firebase (Firestore, Auth, Cloud Functions), RESTful APIs</p>
-      <p><strong>Tools & Platforms:</strong> Git, Postman, Android Studio, VS Code</p>
-      <p><strong>Specialized Skills:</strong> Payment Gateway Integration, Third-party SDKs, FlutterFlow (Basic), Performance Optimization</p>
-    </section>
-
-    <section>
       <h2>Professional Experience</h2>
-      <p><strong>Flutter Developer</strong> – Techgrains Technology, Ahmedabad | June 2024 – Present</p>
-      <ul>
-        <li>Develop modern, scalable mobile applications with clean UI/UX using Flutter.</li>
-        <li>Collaborate with designers and product owners to define new features and ensure a seamless user experience.</li>
-        <li>Manage Firebase services including Firestore, Authentication, and push notifications.</li>
-      </ul>
 
-      <p><strong>Flutter Developer</strong> – Differenz System, Surat | September 2022 – May 2024</p>
-      <ul>
-        <li>Delivered 4+ production-ready apps for B2B and B2C domains.</li>
-        <li>Implemented complex features such as real-time messaging, cloud syncing, and API integration.</li>
-        <li>Led daily standups and actively participated in Agile sprint activities to ensure project milestones were met.</li>
-      </ul>
+      <div class="job-card">
+        <p><strong>Flutter Developer</strong> – Amax Consultancy Pvt Ltd, Ahmedabad | June 2025 – Present</p>
+        <ul>
+          <li>Develop scalable enterprise-grade applications using Flutter.</li>
+          <li>Collaborate with UI/UX teams and business stakeholders.</li>
+          <li>Integrate Google Maps, Mapbox, and Frappe ERP/ERPNext APIs.</li>
+          <li>Build reusable components and improve app performance.</li>
+        </ul>
+      </div>
 
-      <p><strong>Junior Flutter Developer</strong> – CoderKube Technologies, Surat | August 2021 – May 2022</p>
-      <ul>
-        <li>Assisted senior developers in app development, focusing on API integration, UI enhancements, and bug fixing.</li>
-        <li>Actively participated in team code reviews and documentation.</li>
-      </ul>
+      <div class="job-card">
+        <p><strong>Flutter Developer</strong> – Techgrains Technology, Ahmedabad | June 2024 – May 2025</p>
+        <ul>
+          <li>Developed scalable mobile applications using clean code practices.</li>
+          <li>Collaborated with product teams for seamless feature delivery.</li>
+          <li>Managed Firebase (Firestore, Auth, Notifications).</li>
+        </ul>
+      </div>
+
+      <div class="job-card">
+        <p><strong>Flutter Developer</strong> – Differenz System, Surat | September 2022 – May 2024</p>
+        <ul>
+          <li>Delivered 4+ production-grade apps for B2B & B2C clients.</li>
+          <li>Integrated APIs, real-time sync, and cloud messaging.</li>
+          <li>Participated in Agile sprints and daily standups.</li>
+        </ul>
+      </div>
+
+      <div class="job-card">
+        <p><strong>Junior Flutter Developer</strong> – CoderKube Technologies, Surat | August 2021 – May 2022</p>
+        <ul>
+          <li>Assisted in UI development, API connectivity, and debugging.</li>
+          <li>Participated in code reviews and documentation.</li>
+        </ul>
+      </div>
+
     </section>
 
-    <section>
-      <h2>Key Projects</h2>
-      <ul>
-        <li><strong>Gotoliqur Store App:</strong> Created a mobile app for ordering liquor from nearby stores with delivery or pickup options.</li>
-        <li><strong>KMS GST App:</strong> Delivered real-time GST insights, automated reports, and CFO compliance dashboards.</li>
-        <li><strong>Swass Gym:</strong> Built an app to manage gym members, custom workouts, and diet plans.</li>
-        <li><strong>Amalfi Jets:</strong> Designed a private jet booking app with luxury travel features.</li>
-        <li><strong>Mash App:</strong> Liver health analysis tool offering AI-assisted medical feedback.</li>
-        <li><strong>Dheerta:</strong> B2B textile trading app connecting manufacturers, wholesalers, and retailers.</li>
-        <li><strong>Peak Online Support:</strong> Developed an internal support platform with live chat, tickets, and updates.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.Tech in Computer Engineering</strong> – CGPIT, Bardoli | 2018 – 2021</p>
-      <p><strong>Diploma in Computer Engineering</strong> – CGPIT, Bardoli | 2015 – 2018</p>
-    </section>
-
-    <section>
-      <h2>Personal Details</h2>
-      <p><strong>Date of Birth:</strong> 25th July 1995</p>
-      <p><strong>Gender:</strong> Male</p>
-      <p><strong>Marital Status:</strong> Unmarried</p>
-      <p><strong>Nationality:</strong> Indian</p>
-      <p><strong>Languages Known:</strong> English, Hindi, Gujarati</p>
-    </section>
-
-    <section>
-      <h2>Contact Information</h2>
-      <p><strong>Permanent Address:</strong> 114 New Faliya, Gopla, Ta: Mhauva, Di: Surat, Gujarat</p>
-      <p><strong>Current Address:</strong> Shree Panch Villa Bungalows, A1/A2, near B.D. Rao Brahmbhatt Hall, Memnagar, Ahmedabad, Gujarat 380052</p>
-    </section>
-
-  </div>
-</body>
-</html>
+    <!-- You can keep remaining sections same (Projects, Education, Personal Details, etc.) -->
